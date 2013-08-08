@@ -5,7 +5,7 @@ Ext.define('ext-bis.Application', {
         'Login', 
         'Viewport',
         'Header',
-        'Menu',
+        'Navigation',
         'Dashboard',
         'Footer'
      ],

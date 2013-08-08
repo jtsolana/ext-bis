@@ -19,7 +19,7 @@ Ext.define('ext-bis.controller.Viewport', {
            // p.remove('ext-bis.view.Login');
             p.add(Ext.create('ext-bis.view.Header'),
                 Ext.create('ext-bis.view.Footer'),
-                Ext.create('ext-bis.view.Menu'),
+                Ext.create('ext-bis.view.Navigation'),
                 Ext.create('ext-bis.view.Dashboard')
              ); 
             p.doLayout();

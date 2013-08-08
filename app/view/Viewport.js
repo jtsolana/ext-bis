@@ -4,7 +4,7 @@ Ext.define('ext-bis.view.Viewport', {
         'Ext.layout.container.Border',
         'Ext.tab.Panel',
         'ext-bis.view.Header',
-        'ext-bis.view.Menu',
+        'ext-bis.view.Navigation',
         'ext-bis.view.Footer'
     ],
 
