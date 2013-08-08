@@ -4,5 +4,5 @@ session_start();
 
 session_destroy();
 
-header('location: http://localhost/ext-app');
+header('location: http://localhost/ext-bis');
 ?>
