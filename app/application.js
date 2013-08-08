@@ -15,7 +15,8 @@ Ext.define('ext-bis.Application', {
         // TODO: add controllers here
         'Viewport',
         'Login',
-        'Header'
+        'Header',
+        'Navigation'
     ],
 
     stores: [
