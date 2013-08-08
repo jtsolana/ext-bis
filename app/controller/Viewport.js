@@ -1,5 +1,5 @@
 
-Ext.define('ext-app.controller.Viewport', {
+Ext.define('ext-bis.controller.Viewport', {
     extend: 'Ext.app.Controller',
     
     init: function() {
@@ -13,14 +13,14 @@ Ext.define('ext-app.controller.Viewport', {
     onViewportRendered: function(p) {
         // global variable userid ref: index.php
         if (userid == 0) {
-            p.add(Ext.create('ext-app.view.Login')); 
+            p.add(Ext.create('ext-bis.view.Login')); 
             p.doLayout(); 
         } else {
-           // p.remove('ext-app.view.Login');
-            p.add(Ext.create('ext-app.view.Header'),
-                Ext.create('ext-app.view.Footer'),
-                Ext.create('ext-app.view.Menu'),
-                Ext.create('ext-app.view.Dashboard')
+           // p.remove('ext-bis.view.Login');
+            p.add(Ext.create('ext-bis.view.Header'),
+                Ext.create('ext-bis.view.Footer'),
+                Ext.create('ext-bis.view.Menu'),
+                Ext.create('ext-bis.view.Dashboard')
              ); 
             p.doLayout();
         }

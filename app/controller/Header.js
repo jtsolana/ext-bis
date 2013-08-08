@@ -1,4 +1,4 @@
-Ext.define('ext-app.controller.Header', {
+Ext.define('ext-bis.controller.Header', {
     extend: 'Ext.app.Controller',	
     refs: [{ ref: 'toolbar', selector: 'toolbar'} ],
     init: function() {

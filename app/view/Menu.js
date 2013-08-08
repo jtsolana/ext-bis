@@ -1,4 +1,4 @@
-Ext.define('ext-app.view.Menu', {
+Ext.define('ext-bis.view.Menu', {
     extend: 'Ext.container.Container',
     requires:[
         'Ext.panel.Panel',

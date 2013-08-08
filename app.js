@@ -13,8 +13,8 @@ Ext.onReady(function() {
 });
 
 Ext.application({
-    name: 'ext-app',
-    extend: 'ext-app.Application',
+    name: 'ext-bis',
+    extend: 'ext-bis.Application',
  
     launch: function() {
     	 // Setup a task to fadeOut the splashscreen
@@ -39,7 +39,7 @@ Ext.application({
         // Run the fade 200 milliseconds after launch.
         task.delay(200);
         Ext.tip.QuickTipManager.init();
-        Ext.create('ext-app.view.Viewport', {id: 'viewport'});
+        Ext.create('ext-bis.view.Viewport', {id: 'viewport'});
     },
     
     autoCreateViewport: false

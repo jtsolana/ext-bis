@@ -1,4 +1,4 @@
-Ext.define('ext-app.view.Login', {
+Ext.define('ext-bis.view.Login', {
     extend: 'Ext.container.Container',
     requires:[    
         'Ext.layout.container.Absolute',

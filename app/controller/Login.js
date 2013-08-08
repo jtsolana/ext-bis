@@ -1,4 +1,4 @@
-Ext.define('ext-app.controller.Login', {
+Ext.define('ext-bis.controller.Login', {
     extend: 'Ext.app.Controller',
     refs: [{ ref: 'form', selector: 'form'} ],
    

@@ -1,5 +1,5 @@
-Ext.define('ext-app.Application', {
-    name: 'ext-app',
+Ext.define('ext-bis.Application', {
+    name: 'ext-bis',
     extend: 'Ext.app.Application',
      views: [
         'Login', 

@@ -1,4 +1,4 @@
-Ext.define('ext-app.view.Dashboard', {
+Ext.define('ext-bis.view.Dashboard', {
     extend: 'Ext.tab.Panel',
     region: 'center',
     

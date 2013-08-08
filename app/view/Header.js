@@ -1,4 +1,4 @@
-Ext.define('ext-app.view.Header', {
+Ext.define('ext-bis.view.Header', {
     extend: 'Ext.toolbar.Toolbar',
     region: 'north',
     xtype: 'app-header',

@@ -1,11 +1,11 @@
-Ext.define('ext-app.view.Viewport', {
+Ext.define('ext-bis.view.Viewport', {
     extend: 'Ext.container.Viewport',
     requires:[    
         'Ext.layout.container.Border',
         'Ext.tab.Panel',
-        'ext-app.view.Header',
-        'ext-app.view.Menu',
-        'ext-app.view.Footer'
+        'ext-bis.view.Header',
+        'ext-bis.view.Menu',
+        'ext-bis.view.Footer'
     ],
 
     layout: {

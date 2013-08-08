@@ -1,4 +1,4 @@
-Ext.define('ext-app.view.Footer', {
+Ext.define('ext-bis.view.Footer', {
     extend: 'Ext.toolbar.Toolbar',
     xtype: 'app-footer',
     itemId: 'footer',
