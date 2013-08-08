@@ -3,6 +3,7 @@ Ext.define('ext-bis.view.Dashboard', {
     region: 'center',
     
     xtype: 'app-dashboard',
+    itemId: 'dashboard',
     bodyCls: 'icon-square',
     layout: {
         type: 'fit'
