@@ -5,7 +5,7 @@ Ext.define('ext-bis.view.Navigation', {
         'Ext.layout.container.Accordion'
     ],
 
-    xtype: 'app-menu',
+    xtype: 'app-navigation',
     region: 'west',
     width: 250,
     
