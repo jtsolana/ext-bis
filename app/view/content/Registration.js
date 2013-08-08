@@ -3,7 +3,8 @@ Ext.define('ext-bis.view.content.Registration', {
     
     xtype: 'app-registration',
     itemId: 'registration',
- 	layout: 'fit'
+    closable:  true,
+ 	layout: 'fit',
  	html:'Registration Panel'   
 });
 

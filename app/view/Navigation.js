@@ -6,6 +6,7 @@ Ext.define('ext-bis.view.Navigation', {
     ],
 
     xtype: 'app-navigation',
+    itemId: 'navigation',
     region: 'west',
     width: 250,
     
@@ -24,15 +25,16 @@ Ext.define('ext-bis.view.Navigation', {
 
     items: [{
         title: 'Menu',
-       // layout: 'fit',
-
+        itemId: 'menupanel',
         items: [{
             xtype: 'menu',
+            itemId: 'menu',
             border: false,
             bodyStyle:'background-color:white !important;',
             floating: false,  // usually you want this set to True (default)
             items: [{
-                text: 'item 1'
+                text: 'item 1',
+                panel: 'Registration'
             },{
                 text: 'item 2'
             },{
