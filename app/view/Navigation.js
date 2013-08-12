@@ -33,7 +33,7 @@ Ext.define('ext-bis.view.Navigation', {
             bodyStyle:'background-color:white !important;',
             floating: false,  // usually you want this set to True (default)
             items: [{
-                text: 'item 1',
+                text: 'Registration',
                 panel: 'Registration'
             },{
                 text: 'item 2'
@@ -43,11 +43,9 @@ Ext.define('ext-bis.view.Navigation', {
         }]
        
     },{
-        title: 'Reports',
-        html: 'Panel content!'
+        title: 'Reports'
     },{
-        title: 'Settings',
-        html: 'Panel content!'
+        title: 'Settings'
     }]
 
 
