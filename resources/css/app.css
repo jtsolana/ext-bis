@@ -39,5 +39,19 @@
 }
 
 
+/* ---------------------------------
+   registration grid style 
+---------------------------------- */
 
+.registration-list .x-column-header-inner .x-column-header-text {
+    white-space: normal;
+}
+ 
+.registration-list .x-column-header-inner {
+    line-height: normal;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    text-align: center;
+    top: 20%;
+}
 
