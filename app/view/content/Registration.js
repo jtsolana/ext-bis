@@ -8,19 +8,10 @@ Ext.define('ext-bis.view.content.Registration', {
  	
  	initComponent: function() {
 
-        var toolbar = Ext.create('Ext.toolbar.Toolbar',{
-            itemId: 'registrationtoolbar',
-            dock: 'top',
-            items: [{
-            	text: 'New Record',
-            	action: 'newrecord'
-            }]
-        });
-
 		var grid = Ext.create('Ext.grid.Panel', {
-		    dock: 'top',
             cls: 'registration-list',
 		    layout: 'fit',
+            autoScroll: true,
             store: 'Registrations',
 		    columns: [
 		        { xtype: 'rownumberer' },
@@ -38,10 +29,24 @@ Ext.define('ext-bis.view.content.Registration', {
                 { text: 'House #', width: 40, sortable: false, dataIndex: 'house_hold_no', renderer: ''},
                 { text: 'Record Status', width: 55, sortable: false, dataIndex: 'record_status', renderer: ''},
                 { text: 'Remarks', flex: 1, sortable: false, dataIndex: 'remarks',renderer: ''}
-		    ]
+		    ],
+            dockedItems: [{
+                xtype: 'toolbar',
+                itemId: 'registrationtoolbar',
+                dock: 'top',
+                items: [{
+                    text: 'New Record',
+                    action: 'newrecord'
+                }]
+            },{
+                xtype: 'pagingtoolbar',
+                store: 'Registrations',   // same store GridPanel is using
+                dock: 'bottom',
+                displayInfo: true
+            }]
 		});
 
-        this.dockedItems = [toolbar,grid]
+        this.items = [grid]
         this.callParent(arguments);
 
  	}
