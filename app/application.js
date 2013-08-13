@@ -21,6 +21,7 @@ Ext.define('ext-bis.Application', {
 
     stores: [
         // TODO: add stores here
+        'Registrations'
     ]
 
     
