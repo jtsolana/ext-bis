@@ -49,7 +49,7 @@ Ext.define('Ext.ux.grid.feature.Searching', {
 	 * Corresponding toolbar has to exist at least with mimimum configuration tbar:[] for position:top or bbar:[]
 	 * for position bottom. Plugin does NOT create any toolbar.
 	 */
-	position:'bottom',
+	position:'top',
 
 	/**
 	 * @cfg {String} iconCls Icon class for menu button (defaults to icon-magnifier)
@@ -108,7 +108,7 @@ Ext.define('Ext.ux.grid.feature.Searching', {
 	/**
 	 * @cfg {Number} width Width of input field in pixels (defaults to 100)
 	 */
-	width:100,
+	width:300,
 
 	/**
 	 * @cfg {Object} paramNames Params name map (defaults to {fields:'fields', query:'query'}
@@ -152,11 +152,11 @@ Ext.define('Ext.ux.grid.feature.Searching', {
 	onRender:function() {
 				
 		var panel = this.toolbarContainer || this.grid;
-		var tb = 'top' === this.position ? panel.getDockedItems('toolbar[dock="top"]') : panel.getDockedItems('toolbar[dock="top"]');
+		var tb = 'bottom' === this.position ? panel.getDockedItems('toolbar[dock="bottom"]') : panel.getDockedItems('toolbar[dock="top"]');
 		if(tb.length > 0)
 			tb = tb[0]
 		else {
-			tb = Ext.create('Ext.toolbar.Toolbar', {dock: 'top'});
+			tb = Ext.create('Ext.toolbar.Toolbar', {dock: this.position});
 			panel.addDocked(tb);
 		}
 
@@ -177,12 +177,12 @@ Ext.define('Ext.ux.grid.feature.Searching', {
 		tb.add({
 			 text:this.searchText
 			,menu:this.menu
-			
+			,iconCls:this.iconCls
 		});
 
 		// add input field (TwinTriggerField in fact)
 		this.field = Ext.create('Ext.form.TwinTriggerField', {
-			width: 300,
+			width:this.width,
 			qtip: 'ddd',
 			selectOnFocus:undefined === this.selectOnFocus ? true : this.selectOnFocus,
 			trigger1Cls:'x-form-clear-trigger',
