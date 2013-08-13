@@ -8,6 +8,24 @@ Ext.define('ext-bis.view.content.Registration', {
  	
  	initComponent: function() {
 
+        // Custom function used for column renderer @param {Object} val change font color
+        function changeGreen(val){
+                return '<span style="color:green;">' + val + '</span>';
+        }
+        
+        function changeRed(val){
+                return '<span style="color:red;">' + val + '</span>';
+        } 
+        
+        function activeChange(val){
+            if(val == 'Active'){
+                return '<span style="color:green;">' + val +'</span>';
+            }else{
+                return '<span style="color:red;">' + val +'</span>';
+            }
+            return val;
+        }  
+
 		var grid = Ext.create('Ext.grid.Panel', {
             cls: 'registration-list',
 		    layout: 'fit',
@@ -25,10 +43,10 @@ Ext.define('ext-bis.view.content.Registration', {
                 { text: 'Gender', width: 50, sortable: false, dataIndex: 'gender'},
                 { text: 'Civil Status', width: 50, sortable: false, dataIndex: 'civil_status'},
                 { text: 'Address', width: 150, sortable : false, dataIndex: 'address'},
-                { text: 'Zone #', width: 35, sortable: false, dataIndex: 'zone_no', renderer: ''},
-                { text: 'House #', width: 40, sortable: false, dataIndex: 'house_hold_no', renderer: ''},
-                { text: 'Record Status', width: 55, sortable: false, dataIndex: 'record_status', renderer: ''},
-                { text: 'Remarks', flex: 1, sortable: false, dataIndex: 'remarks',renderer: ''}
+                { text: 'Zone #', width: 35, sortable: false, dataIndex: 'zone_no', renderer: changeRed},
+                { text: 'House #', width: 40, sortable: false, dataIndex: 'house_hold_no', renderer: changeRed},
+                { text: 'Record Status', width: 55, sortable: false, dataIndex: 'record_status', renderer: activeChange},
+                { text: 'Remarks', flex: 1, sortable: false, dataIndex: 'remarks',renderer: changeGreen}
 		    ],
             dockedItems: [{
                 xtype: 'toolbar',
