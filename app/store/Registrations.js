@@ -2,8 +2,8 @@ Ext.define('ext-bis.store.Registrations', {
     extend: 'Ext.data.Store',
     model: 'ext-bis.model.Registration',
     autoLoad: true,
-    pageSize: 35,
-    autoLoad: {start: 0, limit: 20},
+    pageSize: 22,
+    autoLoad: {start: 0, limit: 22},
 	sorters: [{
 		property : 'id',
 		direction: 'DESC'
