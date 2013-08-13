@@ -1,3 +1,8 @@
+.x-trigger-cell {
+    /* plugin searching field */
+    background-color: transparent;
+}
+
 .x-mask.splashscreen {
     background-image: url('../images/square.gif') !important;
     opacity: 1;

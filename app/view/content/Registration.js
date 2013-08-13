@@ -5,6 +5,10 @@ Ext.define('ext-bis.view.content.Registration', {
     itemId: 'registration',
     closable:  true,
  	layout: 'fit',
+    requires: [
+        'Ext.grid.*',
+        'Ext.ux.grid.feature.Searching'
+    ],
  	
  	initComponent: function() {
 
@@ -26,11 +30,18 @@ Ext.define('ext-bis.view.content.Registration', {
             return val;
         }  
 
+        var searching = {
+           ftype: 'searching',
+           minChars: 1,
+           mode: 'local'
+        };
+
 		var grid = Ext.create('Ext.grid.Panel', {
             cls: 'registration-list',
 		    layout: 'fit',
             autoScroll: true,
             store: 'Registrations',
+            features: [searching],
 		    columns: [
 		        { xtype: 'rownumberer' },
                 { text: 'ID', hidden: true, dataIndex: 'id'},
@@ -55,7 +66,7 @@ Ext.define('ext-bis.view.content.Registration', {
                 items: [{
                     text: 'New Record',
                     action: 'newrecord'
-                }]
+                },'->']
             },{
                 xtype: 'pagingtoolbar',
                 store: 'Registrations',   // same store GridPanel is using
