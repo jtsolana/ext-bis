@@ -17,11 +17,11 @@ Ext.define('ext-bis.view.content.Registration', {
             }]
         });
 
-
 		var grid = Ext.create('Ext.grid.Panel', {
 		    dock: 'top',
             cls: 'registration-list',
 		    layout: 'fit',
+            store: 'Registrations',
 		    columns: [
 		        { xtype: 'rownumberer' },
                 { text: 'ID', hidden: true, dataIndex: 'id'},
