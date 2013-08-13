@@ -13,20 +13,20 @@ Ext.define('ext-bis.store.Registrations', {
         type: 'ajax',
         api: {
 			 create: '', 
-			 read: '',
+			 read: 'php/registration/list.php',
              update: '',
              destroy: ''
         },
         reader: {
             type: 'json',
-            root: '',
+            root: 'registration',
             successProperty: 'success'
         },
         writer: {
             type: 'json',
             writeAllFields: true,
             encode: true,
-            root: ''
+            root: 'registration'
         }
     }
 });
