@@ -16,7 +16,8 @@ Ext.define('ext-bis.Application', {
         'Viewport',
         'Login',
         'Header',
-        'Navigation'
+        'Navigation',
+        'Registration'
     ],
 
     stores: [
