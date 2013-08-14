@@ -1,5 +1,7 @@
+/* ---------------------------------
+   plugin searching sytle
+---------------------------------- */
 .x-trigger-cell {
-    /* plugin searching field */
     background-color: transparent;
 }
 
@@ -29,6 +31,9 @@
     margin-bottom: 10px;
 }
 
+/* ---------------------------------
+   iconCls used in buttons etc.  
+---------------------------------- */
 
 .icon-blue {
     background-image: url(../images/blue.gif) !important;
@@ -38,6 +43,9 @@
     background-image: url(../images/key.png) !important;
 }
 
+.icon-magnifier {
+    background-image: url(../images/magnifier.png) !important;
+}
 
 .icon-square {
     background-image: url(../images/square.gif) !important;
