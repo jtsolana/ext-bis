@@ -38,6 +38,7 @@ Ext.define('ext-bis.view.content.Registration', {
 
 		var grid = Ext.create('Ext.grid.Panel', {
             cls: 'registration-list',
+            itemId: 'registrationgrid',
 		    layout: 'fit',
             autoScroll: true,
             store: 'Registrations',
