@@ -7,7 +7,9 @@ Ext.define('ext-bis.Application', {
         'Header',
         'Navigation',
         'Dashboard',
-        'Footer'
+        'Footer',
+        'content.Registration',
+        'content.form.Registration'
      ],
 
 
