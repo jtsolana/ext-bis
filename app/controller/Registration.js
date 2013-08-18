@@ -18,10 +18,10 @@ Ext.define('ext-bis.controller.Registration', {
     onClickNewRecord: function() {
 
         var window = Ext.create('Ext.window.Window', {
-            title: 'Registration Form',
+            title: 'Application For Registration',
             iconCls: '',
             height: 500,
-            width: 600, 
+            width: 500, 
             layout: 'fit',   
             items:[{
                 xtype: 'form-registration'
