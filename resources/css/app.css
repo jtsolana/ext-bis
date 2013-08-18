@@ -1,3 +1,16 @@
+
+/* ---------------------------------
+   overide the css class for the tooltip
+---------------------------------- */
+.x-tip {
+    width: auto !important;
+}
+.x-tip-body {
+    width: auto !important;
+}
+.x-tip-body span {
+    width: auto !important;
+}
 /* ---------------------------------
    plugin searching sytle
 ---------------------------------- */
