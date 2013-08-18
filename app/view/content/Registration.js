@@ -3,6 +3,7 @@ Ext.define('ext-bis.view.content.Registration', {
     
     xtype: 'app-registration',
     itemId: 'registration',
+    iconCls: 'icon-menu-registration',
     closable:  true,
  	layout: 'fit',
     requires: [

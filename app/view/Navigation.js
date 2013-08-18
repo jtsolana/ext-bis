@@ -34,11 +34,10 @@ Ext.define('ext-bis.view.Navigation', {
             floating: false,  // usually you want this set to True (default)
             items: [{
                 text: 'Registration',
-                panel: 'Registration'
+                panel: 'Registration',
+                iconCls: 'icon-menu-registration'
             },{
-                text: 'item 2'
-            },{
-                text: 'item 3'
+                text: 'Chart'
             }]
         }]
        
