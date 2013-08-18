@@ -12,7 +12,7 @@ Ext.define('ext-bis.view.Header', {
             },{
                 xtype: 'label',
                 style: { color: 'White', font: 'normal 22px courier'},
-                text: ''
+                text: 'BARANGAY INFORMATION SYSTEM (Cogon, Gitagum. Misamis Oriental)'
             },
             '->',
             {

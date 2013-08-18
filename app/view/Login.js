@@ -30,7 +30,7 @@ Ext.define('ext-bis.view.Login', {
             },{
                 xtype: 'label',
                 style: { color: 'White'},
-                text: ''
+                text: 'Barangay Information System'
             }]
 
         });
