@@ -35,9 +35,10 @@ Ext.define('ext-bis.view.Navigation', {
             items: [{
                 text: 'Registration',
                 panel: 'Registration',
-                iconCls: 'icon-menu-registration'
+                iconCls: 'icon-arrow-right'
             },{
-                text: 'Chart'
+                text: 'Chart',
+                iconCls: 'icon-arrow-right'
             }]
         }]
        
