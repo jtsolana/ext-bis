@@ -69,6 +69,15 @@
 .icon-arrow-right {
     background-image: url(../images/arrow-right.png) !important;
 }
+.icon-menu {
+    background-image: url(../images/menu.png) !important;
+}
+.icon-reports {
+    background-image: url(../images/reports.png) !important;
+}
+.icon-settings {
+    background-image: url(../images/settings.png) !important;
+}
 
 
 /* ---------------------------------

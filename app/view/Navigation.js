@@ -26,6 +26,7 @@ Ext.define('ext-bis.view.Navigation', {
     items: [{
         title: 'Menu',
         itemId: 'menupanel',
+        iconCls: 'icon-menu',
         items: [{
             xtype: 'menu',
             itemId: 'menu',
@@ -43,9 +44,11 @@ Ext.define('ext-bis.view.Navigation', {
         }]
        
     },{
-        title: 'Reports'
+        title: 'Reports',
+        iconCls: 'icon-reports'
     },{
-        title: 'Settings'
+        title: 'Settings',
+        iconCls: 'icon-settings'
     }]
 
 
