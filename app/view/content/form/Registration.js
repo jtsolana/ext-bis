@@ -71,14 +71,25 @@ Ext.define('ext-bis.view.content.form.Registration', {
 		    layout: 'hbox',
 		    items: [{
 		        boxLabel  : 'Male',
-		        name      : 'male',
-		        inputValue: '1',
-		        id        : 'checkbox1'
+		        name: 'male',
+		        inputValue: 'male',
+		        itemId: 'boxmale',
+		        handler: function(field, value) {
+		            if (value) {
+		   				Ext.ComponentQuery.query('#boxfemale')[0].setValue(false);
+		            }          
+		        }       
 		    },{
 		        boxLabel  : 'Female',
 		        name      : 'female',
-		        inputValue: '2',
-		        id        : 'checkbox2'
+		        inputValue: 'female',
+		        itemId: 'boxfemale',
+		        handler: function(field, value) {
+		            if (value) {
+		   				Ext.ComponentQuery.query('#boxmale')[0].setValue(false);
+		            }          
+		        }
+
 		    }]	
 		});
 
@@ -211,9 +222,10 @@ Ext.define('ext-bis.view.content.form.Registration', {
 			}]
 		}); 		    
 
+		// Form items
     	this.items = [{
 			xtype: 'fieldset',
-			title: 'Date Of Registration',
+			title: 'Date of Registration',
 			defaultType: 'datefield',
 			layout: 'anchor',
 			items: [{
@@ -240,6 +252,16 @@ Ext.define('ext-bis.view.content.form.Registration', {
 			layout: 'anchor',
 			defaults: { anchor: '100%'},
 			items: [fullname,gender,birth,address,civilstatus,spousename]
+    	},{
+    		xtype: 'fieldset',
+			title: 'Remarks',
+			layout: 'anchor',
+			defaultType: 'textarea',
+			defaults: { anchor: '100%'},
+			items: [{
+				grow: true,
+	        	name: 'remarks'
+			}]
     	}],
 
 		this.buttons = [{
