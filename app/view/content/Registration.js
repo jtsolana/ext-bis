@@ -66,8 +66,8 @@ Ext.define('ext-bis.view.content.Registration', {
                 itemId: 'registrationtoolbar',
                 dock: 'top',
                 items: [{
-                    text: 'New Record',
-                    action: 'newrecord'
+                    text: 'Prepare',
+                    action: 'prepare'
                 },'->']
             },{
                 xtype: 'pagingtoolbar',

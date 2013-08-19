@@ -5,7 +5,7 @@ Ext.define('ext-bis.controller.Registration', {
     init: function() {
 	
         this.control({
-            'app-registration button[action=newrecord]': {
+            'app-registration button[action=prepare]': {
                 click: this.onClickNewRecord
             }, 
         });
