@@ -38,28 +38,29 @@ Ext.define('ext-bis.view.content.Registration', {
         };
 
 		var grid = Ext.create('Ext.grid.Panel', {
-            cls: 'registration-list',
             itemId: 'registrationgrid',
+               cls: 'registration-list',
 		    layout: 'fit',
             autoScroll: true,
             store: 'Registrations',
             features: [searching],
 		    columns: [
 		        { xtype: 'rownumberer' },
-                { text: 'ID', hidden: true, dataIndex: 'id'},
-                { text: 'Date of Registration',width: 70, sortable : true, dataIndex: 'date_of_registration'},
-                { text: 'Citizen #', width: 40, sortable: true, dataIndex: 'citizen_no'},
-                { text: 'First Name', width: 100, sortable: false, dataIndex: 'first_name'},
-                { text: 'Middle Name', width: 100, sortable: false, dataIndex: 'middle_name'},
-                { text: 'Last Name', width: 100, sortable: false, dataIndex: 'last_name'},
-                { text: 'Age', width: 30, sortable: false, dataIndex: 'age', renderer: ''},
-                { text: 'Gender', width: 50, sortable: false, dataIndex: 'gender'},
-                { text: 'Civil Status', width: 50, sortable: false, dataIndex: 'civil_status'},
-                { text: 'Address', width: 150, sortable : false, dataIndex: 'address'},
-                { text: 'Zone #', width: 35, sortable: false, dataIndex: 'zone_no', renderer: changeRed},
-                { text: 'House #', width: 40, sortable: false, dataIndex: 'house_hold_no', renderer: changeRed},
-                { text: 'Record Status', width: 55, sortable: false, dataIndex: 'record_status', renderer: activeChange},
-                { text: 'Remarks', flex: 1, sortable: false, dataIndex: 'remarks',renderer: changeGreen}
+                { text: 'Registration No.', width: 70, sortable : true, dataIndex: 'registration_no'},
+                { text: 'Date of Registration', width: 70, sortable: true, dataIndex: 'date_of_registration'},
+                { text: 'First Name', width: 100, sortable: true, dataIndex: 'first_name'},
+                { text: 'Middle Name', width: 100, sortable: true, dataIndex: 'middle_name'},
+                { text: 'Last Name', width: 100, sortable: true, dataIndex: 'last_name'},
+                { text: 'Sex', width: 50, sortable: true, dataIndex: 'sex'},
+                { text: 'Age', width: 30, sortable: true, dataIndex: 'age', renderer: changeGreen},
+                { text: 'Address', width: 150, sortable: true, dataIndex: 'address'},
+                { text: 'Zone No.', width: 35, sortable: true, dataIndex: 'zone_no', renderer: changeRed},
+                { text: 'House No.', width: 40, sortable: true, dataIndex: 'house_no', renderer: changeRed},
+                { text: 'Civil Status', width: 40, sortable: true, dataIndex: 'civil_status'},
+                { text: 'Last Update', width: 70, sortable: true, dataIndex: 'last_update'},
+                { text: 'Status', width: 55, sortable: false, dataIndex: 'status', renderer: changeGreen},
+                { text: 'Remarks', flex: 1, sortable: false, dataIndex: 'remarks', renderer: changeGreen}
+                
 		    ],
             dockedItems: [{
                 xtype: 'toolbar',

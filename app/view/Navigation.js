@@ -8,7 +8,7 @@ Ext.define('ext-bis.view.Navigation', {
     xtype: 'app-navigation',
     itemId: 'navigation',
     region: 'west',
-    width: 250,
+    width: 230,
     
     defaults: { 
         // applied to each contained panel

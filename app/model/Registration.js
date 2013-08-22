@@ -1,10 +1,22 @@
 Ext.define('ext-bis.model.Registration', {
     extend: 'Ext.data.Model',
     fields: [
-		'id', 'date_of_registration', 'citizen_no', 'first_name', 'middle_name',
-		'last_name', 'birth_date', 'age', 'place_of_birth', 'address',
-		'zone_no', 'gender', 'civil_status', 'house_hold_no', 'marriage_certificate_no', 
-		'spouse_fname', 'spouse_mname', 'spouse_lname', 'no_of_children', 'deleted', 
-		'record_status', 'remarks'
-	] 
+        {name: 'registration_no'},
+        {name: 'date_of_registration'},
+        {name: 'first_name'},
+        {name: 'middle_name'},
+        {name: 'last_name'},
+        {name: 'sex'},
+        {name: 'birth_date'},
+        {name: 'age'},
+        {name: 'place_of_birth'},
+        {name: 'address'},
+        {name: 'zone_no'},
+        {name: 'house_no'},
+        {name: 'civil_status'},
+        {name: 'spouse_name'},
+        {name: 'last_update'},
+        {name: 'status'},
+        {name: 'remarks'}
+    ]
 }); 

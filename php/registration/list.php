@@ -6,7 +6,7 @@
 	$start = $_REQUEST['start'];
 	$limit = $_REQUEST['limit'];
 	
-	$queryString = "SELECT * FROM citizen_information LIMIT $start,  $limit";
+	$queryString = "SELECT * FROM registration LIMIT $start,  $limit";
 
 	//sql query
 	$query = mysql_query($queryString) or die(mysql_error());
@@ -18,7 +18,7 @@
 	}
 
 	//Consultation total rows in the table
-	$queryTotal = mysql_query('SELECT count(*) as num FROM citizen_information') or die(mysql_error());
+	$queryTotal = mysql_query('SELECT count(*) as num FROM registration') or die(mysql_error());
 	$row = mysql_fetch_assoc($queryTotal);
 	$total = $row['num'];
 
