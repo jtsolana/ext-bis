@@ -12,7 +12,7 @@ Ext.define('ext-bis.store.Registrations', {
     proxy: {
         type: 'ajax',
         api: {
-			 create: '', 
+			 create: 'php/registration/create.php', 
 			 read: 'php/registration/list.php',
              update: '',
              destroy: ''
