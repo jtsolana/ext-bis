@@ -243,7 +243,7 @@ Ext.define('ext-bis.view.content.form.Registration', {
 				name: 'application_no',
 				width: 100,
 				readOnly: true,
-				allowBlank: false
+				allowBlank: true
 			}]
 		},{
     		xtype: 'fieldset',
@@ -266,8 +266,8 @@ Ext.define('ext-bis.view.content.form.Registration', {
 
 		this.buttons = [{
 			text: 'Save',
-			formBind: true,  
-			disabled: true,
+			formBind: false,  
+			disabled: false,
 			action: 'save' 
 		},{
 			text: 'Cancel',

@@ -46,7 +46,7 @@ Ext.define('ext-bis.view.content.Registration', {
             features: [searching],
 		    columns: [
 		        { xtype: 'rownumberer' },
-                { text: 'Registration No.', width: 70, sortable : true, dataIndex: 'registration_no'},
+                { text: 'Application No.', width: 70, sortable : true, dataIndex: 'registration_no'},
                 { text: 'Date of Registration', width: 70, sortable: true, dataIndex: 'date_of_registration'},
                 { text: 'First Name', width: 100, sortable: true, dataIndex: 'first_name'},
                 { text: 'Middle Name', width: 100, sortable: true, dataIndex: 'middle_name'},

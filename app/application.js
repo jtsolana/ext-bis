@@ -1,7 +1,8 @@
 Ext.define('ext-bis.Application', {
     name: 'ext-bis',
     extend: 'Ext.app.Application',
-     views: [
+
+    views: [
         'Login', 
         'Viewport',
         'Header',
@@ -10,11 +11,13 @@ Ext.define('ext-bis.Application', {
         'Footer',
         'content.Registration',
         'content.form.Registration'
-     ],
+    ],
 
+    models: [
+        'Registration'
+    ],
 
     controllers: [
-        // TODO: add controllers here
         'Viewport',
         'Login',
         'Header',
@@ -23,7 +26,6 @@ Ext.define('ext-bis.Application', {
     ],
 
     stores: [
-        // TODO: add stores here
         'Registrations'
     ]
 

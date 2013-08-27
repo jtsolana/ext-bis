@@ -1,7 +1,7 @@
 Ext.define('ext-bis.model.Registration', {
     extend: 'Ext.data.Model',
     fields: [
-        {name: 'registration_no'},
+        {name: 'application_no'},
         {name: 'date_of_registration'},
         {name: 'first_name'},
         {name: 'middle_name'},
