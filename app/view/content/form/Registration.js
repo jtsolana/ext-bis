@@ -14,8 +14,7 @@ Ext.define('ext-bis.view.content.form.Registration', {
         function calculateAge(field, oldValue){
         		var birthdate = field.getValue(oldValue);
 				var parsebirthdate = Date.parse(birthdate);              
-				var datenow = new Date();
-					datenow = Ext.Date.format(datenow,'Y-m-d');
+				var datenow = Ext.Date.format(new Date(),'Y-m-d');
 				var parsedatenow = Date.parse(datenow);
 				var age = (parsedatenow-parsebirthdate)/31536000000;
 				var result = parseInt(age);
@@ -67,26 +66,32 @@ Ext.define('ext-bis.view.content.form.Registration', {
 
 		var gender = Ext.create('Ext.form.FieldContainer', {		
 			fieldLabel: 'Sex',
-		    defaultType: 'checkboxfield',
+		    defaultType: 'textfield',
 		    layout: 'hbox',
 		    items: [{
+		        name: 'sex',
+		        itemId: 'sexfield',
+		        hidden: true
+		    },{
+		    	xtype: 'checkboxfield',
 		        boxLabel  : 'Male',
-		        name: 'male',
 		        inputValue: 'male',
 		        itemId: 'boxmale',
 		        handler: function(field, value) {
 		            if (value) {
 		   				Ext.ComponentQuery.query('#boxfemale')[0].setValue(false);
+		   				Ext.ComponentQuery.query('#sexfield')[0].setValue('MALE');
 		            }          
 		        }       
 		    },{
+		    	xtype: 'checkboxfield',
 		        boxLabel  : 'Female',
-		        name      : 'female',
 		        inputValue: 'female',
 		        itemId: 'boxfemale',
 		        handler: function(field, value) {
 		            if (value) {
 		   				Ext.ComponentQuery.query('#boxmale')[0].setValue(false);
+		   				Ext.ComponentQuery.query('#sexfield')[0].setValue('FEMALE');
 		            }          
 		        }
 
@@ -145,7 +150,7 @@ Ext.define('ext-bis.view.content.form.Registration', {
 				maxLength: 2,
 				allowBlank: false	
 			},{
-				name: 'house_hold_no',
+				name: 'house_no',
 				emptyText: 'House No.',
 				width: 62,
 				margins: '0 0 0 6',	
@@ -230,8 +235,16 @@ Ext.define('ext-bis.view.content.form.Registration', {
 			layout: 'anchor',
 			items: [{
 				name: 'date_of_registration',
+				format: 'Y-m-d',
 				value: new Date(),
 				width: 100,
+				allowBlank: false
+			},
+			{
+				name: 'last_update',
+				format: 'Y-m-d H:i:s', //datetime 
+				value: new Date(),
+				hidden: true,
 				allowBlank: false
 			}]
 		},{	
