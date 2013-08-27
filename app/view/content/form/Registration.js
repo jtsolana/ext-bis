@@ -255,6 +255,7 @@ Ext.define('ext-bis.view.content.form.Registration', {
 			items: [{
 				name: 'application_no',
 				width: 100,
+				itemId: 'applicationnofield',
 				readOnly: true,
 				allowBlank: true
 			}]

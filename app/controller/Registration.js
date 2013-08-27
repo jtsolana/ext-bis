@@ -6,7 +6,7 @@ Ext.define('ext-bis.controller.Registration', {
 	
         this.control({
             'app-registration button[action=prepare]': {
-                click: this.onClickNewRecord
+                click: this.onClickPrepare
             },
             'form-registration button[action=save]': {
                 click: this.onTest
@@ -26,7 +26,7 @@ Ext.define('ext-bis.controller.Registration', {
 
     },
 
-    onClickNewRecord: function() {
+    onClickPrepare: function() {
 
         var window = Ext.create('Ext.window.Window', {
             title: 'Application For Registration',
@@ -38,6 +38,26 @@ Ext.define('ext-bis.controller.Registration', {
                 xtype: 'form-registration'
             }]  
         }).show();  
+
+        var store = Ext.getStore('Registrations');
+        var rowindex = store.getCount();
+
+        if (rowindex == 0) {
+           var num = 1;
+           var str = "" + num;
+           var pad = "00000";
+           var application_no = pad.substring(0, pad.length - str.length) + str;
+           Ext.ComponentQuery.query('#applicationnofield')[0].setValue(application_no);
+        } else {
+            var lastindex = store.getCount();
+            var record = store.getAt(lastindex-1);
+            var registration_id = record.get('registration_id') ;
+            var num = parseInt(registration_id) + 1;
+            var str = "" + num;
+            var pad = "00000";
+            var application_no = pad.substring(0, pad.length - str.length) + str;
+            Ext.ComponentQuery.query('#applicationnofield')[0].setValue(application_no);
+        }  
 
     }
 

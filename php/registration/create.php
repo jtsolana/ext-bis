@@ -26,7 +26,7 @@
 
 	//sql query
 	$query = sprintf("INSERT INTO registration(application_no, date_of_registration, first_name, middle_name, last_name, sex, birth_date, age, place_of_birth, address, zone_no, house_no, civil_status, spouse_name, last_update, status, remarks) 
-		VALUES ('%d', '%s', '%s', '%s', '%s', '%s', '%s', '%d', '%s', '%s', '%d', '%d', '%s', '%s', '%s', '%s', '%s')",
+		VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%d', '%s', '%s', '%d', '%d', '%s', '%s', '%s', '%s', '%s')",
 		mysql_real_escape_string($application_no),
 		mysql_real_escape_string($date_of_registration),
 		mysql_real_escape_string($first_name),
